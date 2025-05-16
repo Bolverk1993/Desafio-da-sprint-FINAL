@@ -1,0 +1,23 @@
+#dashboard-div{
+    margin-top: 25px;
+}
+h2 {
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+select{
+    padding-left: 5px;
+    font-size: 25px;
+}
+select:hover{
+    color: white;
+    background-color:#1351d8 ;
+}
+
+#card-veiculos:hover, app-card:hover{
+    border: solid 2px #1b357e;
+    transform: scale(1.2);
+}

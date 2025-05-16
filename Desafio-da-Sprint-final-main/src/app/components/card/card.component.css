@@ -1,0 +1,21 @@
+#card-box{
+
+}
+
+.titulo{
+    border: 1px solid gray;
+    padding: 10px;
+font-size: 32px;
+font-weight: bold;
+}
+.valor{
+    padding-top: 5px;
+color: #1351d8;
+font-size: 40px;
+font-weight: bold;
+}
+
+.unidades{
+color: gray;
+font-size: 25px;
+}

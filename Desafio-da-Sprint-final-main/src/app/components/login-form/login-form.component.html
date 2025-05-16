@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" class="form-login" (ngSubmit)="acesso()">
+  <div class="mb-3">
+    
+    <label for="usuario-login" class="form-label">Usuário</label><br>
+    <div id="usuario">
+      <img src="images/usuario.png" alt="icone de usuario">
+      <input formControlName="nome" placeholder="Insira seu Usuário" type="text" class="form-control" id="usuario-login" required>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="senha-login" class="form-label">Senha</label>
+    <div id="senha">
+      <img src="images/senha.png" alt="icone de senha">
+      <input formControlName="senha" placeholder="Insira sua senha" type="password" class="form-control" id="senha-login" required>
+    </div>
+  </div>
+
+  <button type="submit" class="btn-login">Acessar</button>
+</form>

@@ -1,0 +1,27 @@
+#btn-menu {
+    width: 175px;
+}
+
+.offcanvas-header, .offcanvas-body{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#btn-logoff {
+    width: 150px;
+}
+
+#logo-ford-menu {
+    width: 100%;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+h5 {
+    font-size: 20px;
+    color: #1351d8;
+    padding: 0;
+    justify-content: left;
+    font-weight: bold;
+}
