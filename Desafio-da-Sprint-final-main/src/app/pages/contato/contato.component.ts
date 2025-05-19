@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ContatoFormComponent } from '../../components/contato-form/contato-form.component';
 
 @Component({
   selector: 'app-contato',
-  imports: [],
+  imports: [ContatoFormComponent],
   templateUrl: './contato.component.html',
   styleUrl: './contato.component.css'
 })

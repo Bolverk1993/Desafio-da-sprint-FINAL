@@ -18,6 +18,10 @@ export class MenuComponent {
     this.router.navigate(["/home"])
   }
 
+  goToContato() {
+    this.router.navigate(["/contato"])
+  }
+  
   logout() {
     sessionStorage.clear()
     this.router.navigate([""])

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+
 .teste {
     display: flex;
     justify-content: center;
@@ -6,59 +9,63 @@
     height: 100%;
 }
 
-.bg-img{
+.bg-img {
     margin-top: 25%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     height: auto;
     background-color: white;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(27, 53, 126, 0.925);
-
+    transform: scale(1.2);
 }
 
-.login_section_carro{
-width: 45%;
-display: flex;
-justify-content: center;
-align-items: center;
+.login_section_carro {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
 }
+
 .login_section_carro img {
     max-width: 100%;
     height: auto;
-    transform: scale(0.85);
     transition: transform 0.3s ease;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-#logo-ford{
-    width: 100%; 
+#logo-ford {
+    width: 100%;
     max-width: 200px;
     margin-bottom: 20px;
 }
 
-.login_section_forms{
-display: flex;
-flex-direction: column;
-justify-content: center;
-width: 45%;
-padding: 30px;
+.login_section_forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    padding: 20px 80px;
+    margin: 0px;
+    justify-items: center;
 }
 
-#BV-login{
+#BV-login {
     font-size: 40px;
     font-weight: bold;
-    color: rgb(13, 158, 13);
+    color: #1351d8;
     padding: 0;
-justify-content: left;
+    justify-content: left;
+    font-family: roboto-serif ;
 }
 
- app-login-form {
+app-login-form {
     width: 100%;
 }
 
@@ -71,16 +78,16 @@ justify-content: left;
         max-width: 95%;
         margin: 20px auto;
     }
-    
-    .login_section_carro, 
+
+    .login_section_carro,
     .login_section_forms {
         width: 100%;
     }
-    
+
     .login_section_carro {
         margin-bottom: 30px;
     }
-    
+
     .login_section_carro img {
         transform: scale(0.7);
     }

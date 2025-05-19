@@ -18,3 +18,4 @@ return this.http.post<InformacaoUser>(
     ))
  }
 }
+

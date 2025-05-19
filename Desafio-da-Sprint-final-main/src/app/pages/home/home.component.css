@@ -29,7 +29,7 @@ transform: scale(.80);
     flex-direction: column;
     gap: 25px;
     box-shadow: 0 4px 12px rgba(27, 53, 126, 0.925);
-    background-color: rgba(188, 203, 236, 0.780) ;
+    background-color: rgba(188, 203, 236, 0.880) ;
     align-items: center;
     text-align: center;
     padding-top: 50px;

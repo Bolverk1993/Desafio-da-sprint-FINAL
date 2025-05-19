@@ -1,21 +1,28 @@
-#card-box{
-
+#card-box {
+    max-width: 150px;
+    max-height: 200px;
 }
 
-.titulo{
+.titulo {
+    display: flex;
     border: 1px solid gray;
     padding: 10px;
-font-size: 32px;
-font-weight: bold;
-}
-.valor{
-    padding-top: 5px;
-color: #1351d8;
-font-size: 40px;
-font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 90px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
-.unidades{
-color: gray;
-font-size: 25px;
+.valor {
+    padding-top: 5px;
+    color: #1351d8;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.unidades {
+    color: gray;
+    font-size: 25px;
 }
