@@ -5,24 +5,32 @@
 
 .titulo {
     display: flex;
-    border: 1px solid gray;
+    border: 2px solid gray;
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
-    min-height: 90px;
+    min-height: 80px;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    margin:  auto;
+}
+
+#alinhamento-div{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
 }
 
 .valor {
     padding-top: 5px;
-    color: #1351d8;
+    color: #1b357e;
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 0px;
 }
 
 .unidades {
     color: gray;
-    font-size: 25px;
+    font-size: 20px;
 }

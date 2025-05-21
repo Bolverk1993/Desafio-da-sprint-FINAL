@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { SaudacaoComponent } from '../../components/saudacao/saudacao.component';
-import { MenuComponent } from '../../components/menu/menu.component';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
-  imports: [SaudacaoComponent,MenuComponent],
+  imports: [SaudacaoComponent,HeaderComponent,FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

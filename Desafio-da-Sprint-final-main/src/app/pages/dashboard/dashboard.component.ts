@@ -3,11 +3,13 @@ import { CardComponent } from '../../components/card/card.component';
 import { CarTableComponent } from '../../components/car-table/car-table.component';
 import { DashboardService } from '../../services/dashboard.service';
 import { Veiculo, VinInfos } from '../../models/car';
-import { MenuComponent } from '../../components/menu/menu.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CardComponent, CarTableComponent, MenuComponent],
+  imports: [CardComponent, CarTableComponent, HeaderComponent,FooterComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

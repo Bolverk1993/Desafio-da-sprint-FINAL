@@ -1,0 +1,37 @@
+#rodape {
+    position: fixed;             
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;              
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #1b357e;
+    color: white;
+    padding: 0 20px;
+    z-index: 9999;
+}
+
+.icones {
+    transform: scale(0.5);
+    margin: 0 5px;
+}
+
+.copyright {
+    padding-left: 15%;
+    margin: auto;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.git {
+    text-decoration: none;
+    color: white;
+}
+
+.link__externo {
+    margin: auto;
+}

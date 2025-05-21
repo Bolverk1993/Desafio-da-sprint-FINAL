@@ -1,33 +1,32 @@
+<app-header />
 <div id="dashboard-div">
-    <app-menu />
-    
-    <section class="cartoes">
-        <div id="card-veiculos" class="shadow border border-black p-3">
-            <h2>Veículos</h2>
-            <select (change)="onChangeSelect($event)">
-                @for(v of veiculos; track v.id){
-                <option value="{{ v.id }}">{{ v.vehicle }}</option>
-                }
-            </select>
-        </div>
-        
-        <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal" />
-        <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected" />
-        <app-card [titulo]="'UpdateSoftware'" [valor]="veiculoSelecionado.softwareUpdates" />
-    </section>
+    <div id="parte-cima">
+
+
+        <section class="cartoes">
+            <div id="card-veiculos" class="shadow border border-black p-3">
+                <h2>Veículos</h2>
+                <select (change)="onChangeSelect($event)">
+                    @for(v of veiculos; track v.id){
+                    <option value="{{ v.id }}">{{ v.vehicle }}</option>
+                    }
+                </select>
+            </div>
+
+            <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal" />
+            <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected" />
+            <app-card [titulo]="'Update Software'" [valor]="veiculoSelecionado.softwareUpdates" />
+        </section>
+    </div>
 
     <section id="carros-img">
         <img [src]="veiculoSelecionado.img" [alt]="veiculoSelecionado.vehicle">
     </section>
-    
+
     <section class="table-container">
-        <app-car-table 
-            [vin]="veiculoSelecionado.vin"
-            [lat]="vinInfos.lat"
-            [long]="vinInfos.long"
-            [nivelCombustivel]="vinInfos.nivelCombustivel"
-            [odometro]="vinInfos.odometro"
-            [status]="vinInfos.status">
+        <app-car-table [vin]="veiculoSelecionado.vin" [lat]="vinInfos.lat" [long]="vinInfos.long"
+            [nivelCombustivel]="vinInfos.nivelCombustivel" [odometro]="vinInfos.odometro" [status]="vinInfos.status">
         </app-car-table>
     </section>
+    <app-footer />
 </div>

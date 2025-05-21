@@ -1,0 +1,3 @@
+type Contatoinfo = {
+    id: number
+}

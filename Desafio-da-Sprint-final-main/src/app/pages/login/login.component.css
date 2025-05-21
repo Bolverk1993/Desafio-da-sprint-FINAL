@@ -23,6 +23,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(27, 53, 126, 0.925);
     transform: scale(1.2);
+     padding-bottom: 80px;
 }
 
 .login_section_carro {

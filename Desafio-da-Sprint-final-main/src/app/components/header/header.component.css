@@ -1,0 +1,21 @@
+header {
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+    display: flex;
+    justify-content: space-between;
+     position: relative;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    border-bottom: 4px solid #1b357e;
+    margin-bottom: 10px;
+    margin-top: 120px;
+    padding: 10px;
+height: 100px;
+}
+header img{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    max-width: 200px;
+}
