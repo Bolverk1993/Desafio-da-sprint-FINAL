@@ -4,9 +4,17 @@
 justify-content: center;
 font-family:oswald ;
 }
-p {
+
+#card-video{
+display: flex;
+flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#easteregg{
+  color: #1351d8;
+  font-weight: bold;
 }

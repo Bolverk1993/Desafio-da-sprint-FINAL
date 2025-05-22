@@ -1,7 +1,8 @@
 <app-header />
- <app-menu />
+<section id="enquadramento">
 <div class="contato">
-    <p>teste</p>
-    <app-contato-form />
+    <img src="images/broncoSport.png" alt="bonco vermelho">
+    <app-contato-form (formSubmit)="onFormSubmit($event)"></app-contato-form>
 </div>
 <app-footer />
+</section>

@@ -1,12 +1,28 @@
 <app-header />
 <section id="background">
+    <!-- Carrossel de imagens -->
     <div id="img-bg">
-        <img src="images/ranger.png" alt="Ford Ranger 2022">
+        <img [src]="currentImage" [alt]="(currentImageIndex + 1)" class="bg-image">
     </div>
 
-
-    <div class="body-home">
-        <app-saudacao />
+    <div class="body-home" [class.video-active]="showVideo">
+        <app-saudacao 
+            *ngIf="!showVideo" 
+            (dblclick)="toggleVideo()" />
+        
+        <div *ngIf="showVideo" class="video-container">
+            <button class="close-video" (click)="toggleVideo()" aria-label="Fechar vídeo">
+                ×
+            </button>
+            
+            <iframe 
+                #videoIframe
+                [src]="safeVideoUrl" 
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
     <app-footer />

@@ -1,1 +1,60 @@
-<p>contato-form works!</p>
+<div id="tabela-contato">
+
+  <h3>Fale conosco</h3>
+
+  <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()" class="formulario_contato">
+    <input type="text" formControlName="nome" placeholder="NOME*" class="fordform">
+    <div *ngIf="submitted && contatoForm.controls.nome.errors" class="error-message">
+      *Nome é obrigatório
+    </div>
+    
+    <input type="text" formControlName="sobrenome" placeholder="SOBRENOME*" class="fordform">
+    <div *ngIf="submitted && contatoForm.controls.sobrenome.errors" class="error-message">
+      *Sobrenome é obrigatório
+    </div>
+    
+    <input type="email" formControlName="email" placeholder="E-MAIL*" class="fordform">
+    <div *ngIf="submitted && contatoForm.controls.email.errors" class="error-message">
+      *Por favor, insira um e-mail válido
+    </div>
+    
+    <input type="text" formControlName="cpf" placeholder="CPF*" class="fordform">
+    <div *ngIf="submitted && contatoForm.controls.cpf.errors" class="error-message">
+      *CPF é obrigatório
+  </div>
+
+  <input type="tel" formControlName="telefone" placeholder="TELEFONE*" class="fordform">
+  <div *ngIf="submitted && contatoForm.controls.telefone.errors" class="error-message">
+    *Telefone é obrigatório
+  </div>
+  
+  <select formControlName="contato" class="fordform">
+    <option value="" disabled selected>COMO DESEJA SER CONTATADO*</option>
+    <option *ngFor="let opcao of opcoesContato" [value]="opcao">{{opcao}}</option>
+  </select>
+  <div *ngIf="submitted && contatoForm.controls.contato.errors" class="error-message">
+    Por favor, selecione uma opção
+  </div>
+  
+  <div class="checkbox-group">
+    <input type="checkbox" id="receberPropagandas" formControlName="receberPropagandas">
+    <label for="receberPropagandas">Desejo receber ofertas e propagandas por e-mail</label>
+  </div>
+  
+  <div class="checkbox-group">
+    <input type="checkbox" id="aceitouLGPD" formControlName="aceitouLGPD" required>
+    <label for="aceitouLGPD">Li e aceito os termos de uso de dados conforme a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LGPD</a></label>
+
+    <div *ngIf="submitted && contatoForm.controls.aceitouLGPD.errors" class="error-message">
+      Você deve aceitar os termos para continuar
+    </div>
+  </div>
+  
+  <!-- Botão desabilitado até LGPD ser aceita -->
+  <button type="submit" 
+  [disabled]="!contatoForm.valid || isLoading" 
+  class="submit-button">
+  {{ isLoading ? 'Enviando...' : 'Enviar' }}
+</button>
+</form>
+</div>

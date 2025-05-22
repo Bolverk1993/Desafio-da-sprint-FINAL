@@ -1,4 +1,52 @@
+#enquadramento{
+width: 1246px;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
 .contato{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-inline-start: 100px;
+    margin-inline-end: 340px; 
+    gap: 0px;
+}
+.contato img{
+        max-width: auto;
+    max-height: 400px;
+    transform: scale(0.7);
+}
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .contato {
+        width: 900px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .contato img {
+       display: none;
+    }
+}
+
+@media (max-width: 504px) {
+      .contato {
+    
+    }
+    
+    .contato img,
+    app-contato-form {
+        transform: scale(0.8);
+
+    }
+    
+    .contato img {
+        max-height: 300px;
+        transform: scale(0.7);
+    }
 }

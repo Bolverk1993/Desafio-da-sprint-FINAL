@@ -1,43 +1,112 @@
-#background{
- position: relative;
- min-width: 100vw;
- min-height: 100vh;  
-}
-#img-bg
-{
-opacity: 0.7;
- position: absolute;
- width: 100%;
- height: 100%;
- z-index: 1; 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#img-bg img{
-   
-    width: 100%;
+#background {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+#img-bg img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  transform: scale(0.7);
 }
 
-.body-home{
-    position: fixed;
-   box-sizing: border-box;
-   width: 200px;
-   height: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    box-shadow: 0 4px 12px rgba(27, 53, 126, 0.925);
-    background-color: rgba(188, 203, 236, 0.880) ;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-    border-radius: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-     z-index: 2;
-    max-width: 350;
-    padding-bottom: 80px;
+.body-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  max-width: 350px;
+  background-color: rgba(188, 203, 236, 0.88);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(27, 53, 126, 0.925);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px 80px;
+  box-sizing: border-box;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.body-home.video-active {
+  width: 80vw;
+  max-width: 800px;
+  height: auto;
+  padding: 20px;
+
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-video {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(27, 53, 126, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-video:hover {
+  background-color: rgba(27, 53, 126, 1);
+  transform: scale(1.1);
+}
+
+app-saudacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }

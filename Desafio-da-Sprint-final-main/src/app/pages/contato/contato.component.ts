@@ -1,14 +1,23 @@
 import { Component } from '@angular/core';
-import { ContatoFormComponent } from '../../components/contato-form/contato-form.component';
+import { Contato } from '../../models/contatos';
 import { HeaderComponent } from '../../components/header/header.component';
+import { ContatoFormComponent } from '../../components/contato-form/contato-form.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-contato',
-  imports: [ContatoFormComponent,HeaderComponent,FooterComponent],
+  imports: [HeaderComponent,ContatoFormComponent, FooterComponent ],
   templateUrl: './contato.component.html',
-  styleUrl: './contato.component.css'
+  styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent {
-
+  onFormSubmit(formData: Contato) { 
+    console.log('Dados tipados:', formData);
+    
+    
+    console.log('Nome:', formData.nome); 
+    console.log('Método de contato:', formData.contato); 
+    
+  
+  }
 }

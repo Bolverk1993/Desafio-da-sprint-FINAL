@@ -1,11 +1,12 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 #dashboard-div {
-    min-width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,51 +14,45 @@ html, body {
     background-color: #f5f5f5;
     overflow: hidden;
 }
-#parte-cima{
-display: flex;
+
+#parte-cima {
+    display: flex;
+    overflow-x: auto;
 
 }
-
-/* app-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 60px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-} */
 
 .cartoes {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 0px;
     padding: 10px;
-    margin: 0 0;
+    margin: 0px;
     flex: 1;
     max-height: 250px;
+    width: 90%;
     background-color: white;
 }
 
-#card-veiculos, app-card {
-    margin-inline-end: 100px;
-    margin-inline-start: 100px;
+#card-veiculos,
+app-card {
+
     flex: 1;
     max-width: 150px;
     max-height: 200px;
     transition: transform 0.3s ease;
 }
 
-#card-veiculos:hover, app-card:hover {
+#card-veiculos:hover,
+app-card:hover {
     transform: scale(1.05);
 }
 
-#card-veiculos h2{
-     border: 2px solid gray;
+#card-veiculos h2 {
+    border: 2px solid gray;
     background-color: white;
     font-size: 20px;
 }
+
 #carros-img {
     width: 100%;
     padding: 10px;
@@ -85,11 +80,18 @@ h2 {
     background-color: #f8f9fa;
 }
 
-.table-container{
-width: 100vw;
- padding-bottom: 80px;
+.table-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 47px;
 }
-app-car-table{
+
+app-car-table {
     width: 100%;
 }
 
@@ -103,31 +105,4 @@ select {
     border-radius: 4px;
     margin-top: 10px;
     background-color: white;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    #dashboard-div {
-        padding-top: 60px;
-    }
-
-    .cartoes {
-        flex-direction: column;
-        align-items: center;
-        overflow-y: auto;
-    }
-
-    #card-veiculos, app-card {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #carros-img img {
-        max-height: 120px;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-        min-height: 60px;
-    }
 }
