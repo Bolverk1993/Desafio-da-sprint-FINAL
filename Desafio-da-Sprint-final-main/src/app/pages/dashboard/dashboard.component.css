@@ -18,15 +18,14 @@ body {
 #parte-cima {
     display: flex;
     overflow-x: auto;
-
 }
 
 .cartoes {
     display: flex;
     justify-content: center;
-    gap: 0px;
+    gap: 10px; /* Adicionando um pequeno espaço entre os cartões */
     padding: 10px;
-    margin: 0px;
+    margin: 0;
     flex: 1;
     max-height: 250px;
     width: 90%;
@@ -35,7 +34,6 @@ body {
 
 #card-veiculos,
 app-card {
-
     flex: 1;
     max-width: 150px;
     max-height: 200px;
@@ -105,4 +103,33 @@ select {
     border-radius: 4px;
     margin-top: 10px;
     background-color: white;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .cartoes {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza os cartões */
+    }
+
+    #card-veiculos,
+    app-card {
+        max-width: 90%; /* Aumenta a largura máxima em telas menores */
+        margin-bottom: 10px; /* Adiciona espaço entre os cartões */
+    }
+
+    .table-container {
+        margin-left: 0; /* Remove a margem esquerda em telas menores */
+        padding-bottom: 40px; /* Ajusta o padding inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    select {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do select */
+    }
 }
